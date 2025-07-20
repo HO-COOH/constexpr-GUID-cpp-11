@@ -23,11 +23,11 @@ namespace guid_parse
 		constexpr boost::uuids::uuid uuid_creator(GUID guid) {
 			return 
 				boost::uuids::uuid
-			{ get_nth_byte_of(guid.Data1, 3), get_nth_byte_of(guid.Data1, 2), get_nth_byte_of(guid.Data1, 1), get_nth_byte_of(guid.Data1, 0)
+			{{ get_nth_byte_of(guid.Data1, 3), get_nth_byte_of(guid.Data1, 2), get_nth_byte_of(guid.Data1, 1), get_nth_byte_of(guid.Data1, 0)
 				, get_nth_byte_of(guid.Data2, 1), get_nth_byte_of(guid.Data2, 0)
 				, get_nth_byte_of(guid.Data3, 1), get_nth_byte_of(guid.Data3, 0)
 				, guid.Data4[0], guid.Data4[1],guid.Data4[2],guid.Data4[3],guid.Data4[4],guid.Data4[5],guid.Data4[6],guid.Data4[7]
-			};
+			}};
 		}
 
 		constexpr boost::uuids::uuid make_uuid_helper(const char *str, size_t N)
